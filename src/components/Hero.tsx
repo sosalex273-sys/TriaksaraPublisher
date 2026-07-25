@@ -52,7 +52,7 @@ export const Hero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4"
             >
-              <Button size="lg" className="w-auto rounded-full px-6 md:px-8 h-12 md:h-14 text-sm md:text-base gap-1.5 md:gap-2 shadow-lg shadow-primary/25" onClick={() => window.open('https://wa.me/628981669928', '_blank')}>
+              <Button size="lg" className="w-auto rounded-full px-6 md:px-8 h-12 md:h-14 text-sm md:text-base gap-1.5 md:gap-2 shadow-lg shadow-primary/25" onClick={() => window.open('https://wa.me/628981669925', '_blank')}>
                 Konsultasi Sekarang
                 <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
               </Button>

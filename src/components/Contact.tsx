@@ -38,7 +38,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-lg">Telepon & WhatsApp</h4>
-                  <p className="text-slate-600 leading-relaxed">+62 898-1669-928 (Admin)</p>
+                  <p className="text-slate-600 leading-relaxed">+62 898-1669-925 (Admin)</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -70,7 +70,7 @@ export const Contact = () => {
           >
             <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50">
               <h3 className="text-2xl font-bold font-jakarta mb-6 text-slate-900">Kirim Pesan Cepat</h3>
-              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); window.open("https://wa.me/628981669928", "_blank"); }}>
+              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); window.open("https://wa.me/628981669925", "_blank"); }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-700">Nama Lengkap</label>

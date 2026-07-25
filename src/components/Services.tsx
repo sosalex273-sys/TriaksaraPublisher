@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, GraduationCap, Globe } from "lucide-react";
 
 export const Services = () => {
-  const waLink = "https://wa.me/628981669928";
+  const waLink = "https://wa.me/628981669925";
 
   return (
     <section id="layanan" className="py-12 md:py-24 lg:py-32 bg-white">

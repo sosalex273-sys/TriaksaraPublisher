@@ -53,7 +53,7 @@ export const Footer = () => {
               <li><Link href="#" className="hover:text-primary transition-colors">Tim Kami</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Karir</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Testimoni</Link></li>
-              <li><a href="https://wa.me/628981669928" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">Hubungi Kami</a></li>
+              <li><a href="https://wa.me/628981669925" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">Hubungi Kami</a></li>
             </ul>
           </div>
 

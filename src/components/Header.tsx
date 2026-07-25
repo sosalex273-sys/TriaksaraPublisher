@@ -63,7 +63,7 @@ export const Header = () => {
                 </li>
               ))}
             </ul>
-            <Button className="rounded-full px-6" onClick={() => window.open('https://wa.me/628981669928', '_blank')}>Konsultasi Sekarang</Button>
+            <Button className="rounded-full px-6" onClick={() => window.open('https://wa.me/628981669925', '_blank')}>Konsultasi Sekarang</Button>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -92,7 +92,7 @@ export const Header = () => {
               </li>
             ))}
           </ul>
-          <Button className="w-full rounded-full mt-2" onClick={() => window.open('https://wa.me/628981669928', '_blank')}>Konsultasi Sekarang</Button>
+          <Button className="w-full rounded-full mt-2" onClick={() => window.open('https://wa.me/628981669925', '_blank')}>Konsultasi Sekarang</Button>
         </div>
       )}
     </header>
