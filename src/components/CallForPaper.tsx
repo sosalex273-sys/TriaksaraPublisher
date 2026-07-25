@@ -69,7 +69,7 @@ const FlyerCard = ({ imgUrl, onError, onClick }: { imgUrl: string, onError: () =
 
     {/* Image Container */}
     <div className="relative w-full h-[260px] overflow-hidden">
-      <img src={imgUrl} alt="Call for Paper Flyer" className="w-full h-full object-contain bg-slate-50 transition-transform duration-300 group-hover:scale-105" loading="lazy" onError={onError} />
+      <img src={imgUrl} alt="Call for Paper Flyer" className="w-full h-full object-contain bg-slate-50 transition-all duration-300 blur-md group-hover:blur-none group-hover:scale-105" loading="lazy" onError={onError} />
       
       <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
         <ZoomIn className="text-white w-10 h-10" />

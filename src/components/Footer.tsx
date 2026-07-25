@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../lg.png";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Twitter } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -22,37 +22,27 @@ export const Footer = () => {
             <p className="text-slate-400 mb-6 leading-relaxed">
               Mitra publikasi akademik terpercaya yang memberikan layanan komprehensif mulai dari editing hingga penerbitan dengan standar internasional.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
+
           </div>
 
           <div>
             <h4 className="text-white font-bold text-lg mb-6 font-jakarta">Layanan</h4>
             <ul className="space-y-4">
-              <li><Link href="#" className="hover:text-primary transition-colors">Publikasi Jurnal Nasional</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Publikasi Jurnal Internasional</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Pendaftaran Hak Cipta (HKI)</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Penerbitan Buku (ISBN)</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Proofreading & Translation</Link></li>
+              <li><Link href="/produk" className="hover:text-primary transition-colors">Publikasi Jurnal Nasional</Link></li>
+              <li><Link href="/produk" className="hover:text-primary transition-colors">Publikasi Jurnal Internasional</Link></li>
+              <li><Link href="/#layanan" className="hover:text-primary transition-colors">Pendaftaran Hak Cipta (HKI)</Link></li>
+              <li><Link href="/#layanan" className="hover:text-primary transition-colors">Penerbitan Buku (ISBN)</Link></li>
+              <li><Link href="/#layanan" className="hover:text-primary transition-colors">Proofreading & Translation</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-bold text-lg mb-6 font-jakarta">Perusahaan</h4>
             <ul className="space-y-4">
-              <li><Link href="#tentang-kami" className="hover:text-primary transition-colors">Tentang Kami</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Tim Kami</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Karir</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Testimoni</Link></li>
+              <li><Link href="/#tentang-kami" className="hover:text-primary transition-colors">Tentang Kami</Link></li>
+              <li><Link href="/#tentang-kami" className="hover:text-primary transition-colors">Tim Kami</Link></li>
+              <li><Link href="/#tentang-kami" className="hover:text-primary transition-colors">Karir</Link></li>
+              <li><Link href="/#testimoni" className="hover:text-primary transition-colors">Testimoni</Link></li>
               <li><a href="https://wa.me/628981669925" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">Hubungi Kami</a></li>
             </ul>
           </div>
@@ -60,9 +50,9 @@ export const Footer = () => {
           <div>
             <h4 className="text-white font-bold text-lg mb-6 font-jakarta">Legal</h4>
             <ul className="space-y-4">
-              <li><Link href="#" className="hover:text-primary transition-colors">Syarat & Ketentuan</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Kebijakan Privasi</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Disclaimer</Link></li>
+              <li><Link href="/" className="hover:text-primary transition-colors">Syarat & Ketentuan</Link></li>
+              <li><Link href="/" className="hover:text-primary transition-colors">Kebijakan Privasi</Link></li>
+              <li><Link href="/" className="hover:text-primary transition-colors">Disclaimer</Link></li>
             </ul>
           </div>
         </div>
