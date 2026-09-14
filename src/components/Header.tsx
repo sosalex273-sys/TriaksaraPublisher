@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../lg.png";
+import logo from "../../lglg.png";
 import { Menu, X, BookOpen } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -41,11 +41,11 @@ export const Header = () => {
           <Link href="#" className="flex items-center gap-2 md:gap-3">
             <Image 
               src={logo} 
-              alt="Green Publisher Logo Icon" 
+              alt="Triaksara Publisher Logo" 
               className="h-10 md:h-11 w-auto object-contain"
             />
             <span className="font-jakarta font-bold text-xl md:text-2xl text-slate-900 tracking-tight">
-              Greeen<span className="text-emerald-600">Publisher</span>
+              Triaksara<span className="text-amber-600">Publisher</span>
             </span>
           </Link>
 
@@ -63,7 +63,7 @@ export const Header = () => {
                 </li>
               ))}
             </ul>
-            <Button className="rounded-full px-6" onClick={() => window.open('https://wa.me/628981669925', '_blank')}>Konsultasi Sekarang</Button>
+            <Button className="rounded-full px-6" onClick={() => window.open('https://wa.me/6289502733564', '_blank')}>Konsultasi Sekarang</Button>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -92,7 +92,7 @@ export const Header = () => {
               </li>
             ))}
           </ul>
-          <Button className="w-full rounded-full mt-2" onClick={() => window.open('https://wa.me/628981669925', '_blank')}>Konsultasi Sekarang</Button>
+          <Button className="w-full rounded-full mt-2" onClick={() => window.open('https://wa.me/6289502733564', '_blank')}>Konsultasi Sekarang</Button>
         </div>
       )}
     </header>

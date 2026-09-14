@@ -9,17 +9,17 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Greeenpublisher - Premium Publishing Company",
+  title: "Triaksara Publisher - Premium Publishing Company",
   description: "Layanan publikasi jurnal, buku, dan HKI profesional terbaik.",
-  keywords: ["Jurnal", "Publikasi", "HKI", "Buku", "Greeenpublisher"],
-  authors: [{ name: "Greeenpublisher" }],
+  keywords: ["Jurnal", "Publikasi", "HKI", "Buku", "Triaksara Publisher"],
+  authors: [{ name: "Triaksara Publisher" }],
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://greeenpublisher.id",
-    title: "Greeenpublisher - Premium Publishing",
+    url: "https://triaksarapublisher.id",
+    title: "Triaksara Publisher - Premium Publishing",
     description: "Layanan publikasi terbaik untuk kebutuhan akademik dan profesional.",
-    siteName: "Greeenpublisher",
+    siteName: "Triaksara Publisher",
   },
   robots: {
     index: true,

@@ -18,7 +18,7 @@ export const AboutUs = () => {
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-200 shadow-lg">
               <img
                 src="/images/about.png"
-                alt="Tim Greeenpublisher"
+                alt="Tim Triaksara Publisher"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
@@ -41,7 +41,7 @@ export const AboutUs = () => {
               Mitra Terpercaya untuk Kesuksesan Akademik Anda
             </h2>
             <p className="text-sm md:text-lg text-slate-600 mb-6 md:mb-8 leading-relaxed">
-              <strong>GREEN PUBLISHER</strong> adalah Lembaga Publikasi Ilmiah yang sudah berdiri sejak 2018 dan resmi berbadan hukum dengan Nomor Induk Berusaha (NIB): 0304220013798 serta sudah berbentuk CV. Sejak didirikan, GREEN PUBLISHER telah membantu ribuan akademisi dalam menerbitkan jurnal dan buku, baik yang terakreditasi nasional maupun bereputasi internasional.
+              <strong>TRIAKSARA PUBLISHER</strong> adalah Lembaga Publikasi Ilmiah yang sudah berdiri sejak 2018 dan resmi berbadan hukum dengan Nomor Induk Berusaha (NIB): 0304220013798 serta sudah berbentuk CV. Sejak didirikan, TRIAKSARA PUBLISHER telah membantu ribuan akademisi dalam menerbitkan jurnal dan buku, baik yang terakreditasi nasional maupun bereputasi internasional.
             </p>
             <ul className="space-y-4">
               {[

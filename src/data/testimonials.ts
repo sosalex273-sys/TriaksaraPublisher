@@ -3,7 +3,7 @@ export const testimonials = [
     id: 1,
     name: "Dr. Budi Santoso",
     role: "Dosen Universitas Indonesia",
-    content: "Layanan yang luar biasa profesional. Artikel saya berhasil tembus Scopus Q2 berkat pendampingan yang intensif dari tim Greeenpublisher.",
+    content: "Layanan yang luar biasa profesional. Artikel saya berhasil tembus Scopus Q2 berkat pendampingan yang intensif dari tim Triaksara Publisher.",
     rating: 5,
     image: "https://i.pravatar.cc/150?img=11"
   },

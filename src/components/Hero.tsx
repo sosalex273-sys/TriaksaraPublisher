@@ -52,7 +52,7 @@ export const Hero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4"
             >
-              <Button size="lg" className="w-auto rounded-full px-6 md:px-8 h-12 md:h-14 text-sm md:text-base gap-1.5 md:gap-2 shadow-lg shadow-primary/25" onClick={() => window.open('https://wa.me/628981669925', '_blank')}>
+              <Button size="lg" className="w-auto rounded-full px-6 md:px-8 h-12 md:h-14 text-sm md:text-base gap-1.5 md:gap-2 shadow-lg shadow-primary/25" onClick={() => window.open('https://wa.me/6289502733564', '_blank')}>
                 Konsultasi Sekarang
                 <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
               </Button>
@@ -78,7 +78,7 @@ export const Hero = () => {
               />
               
               {/* Central Background Shape */}
-              <div className="absolute w-[260px] h-[260px] md:w-[380px] md:h-[380px] rounded-full bg-gradient-to-tr from-primary/20 to-green-200/50 border-[6px] md:border-[8px] border-white shadow-xl z-0" />
+              <div className="absolute w-[260px] h-[260px] md:w-[380px] md:h-[380px] rounded-full bg-gradient-to-tr from-primary/20 to-amber-200/50 border-[6px] md:border-[8px] border-white shadow-xl z-0" />
               
               {/* Image Container */}
               <div className="absolute bottom-0 w-[240px] h-[360px] md:w-[320px] md:h-[480px] bg-slate-100 rounded-t-[120px] md:rounded-t-[160px] shadow-2xl overflow-hidden border-[6px] md:border-8 border-white z-10 flex items-center justify-center">
@@ -136,7 +136,7 @@ export const Hero = () => {
                 transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut", delay: 0.5 }}
                 className="absolute top-0 md:top-[5%] right-[-10px] md:right-0 lg:-right-10 z-20 bg-white p-2 md:p-3 rounded-2xl shadow-xl shadow-green-500/10 border border-green-100 w-[200px] md:w-[240px] scale-[0.8] md:scale-100 origin-top-right"
               >
-                <div className="bg-gradient-to-r from-primary to-emerald-500 text-white text-[8px] md:text-[10px] font-bold px-2 py-1 md:px-3 md:py-1 rounded-md inline-block mb-1.5 md:mb-2">
+                <div className="bg-gradient-to-r from-primary to-amber-500 text-white text-[8px] md:text-[10px] font-bold px-2 py-1 md:px-3 md:py-1 rounded-md inline-block mb-1.5 md:mb-2">
                   Benefit Pasti:
                 </div>
                 <div className="grid grid-cols-1 gap-x-2 gap-y-1 md:gap-y-1.5">

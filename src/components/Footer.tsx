@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../lg.png";
+import logo from "../../lglg.png";
 import { Twitter } from "lucide-react";
 
 export const Footer = () => {
@@ -12,11 +12,11 @@ export const Footer = () => {
             <Link href="#" className="flex items-center gap-2 md:gap-3 mb-6">
               <Image 
                 src={logo} 
-                alt="Green Publisher Logo Icon" 
-                className="h-14 md:h-16 w-auto object-contain brightness-0 invert" 
+                alt="Triaksara Publisher Logo" 
+                className="h-14 md:h-16 w-auto object-contain" 
               />
               <span className="font-jakarta font-bold text-3xl text-white tracking-tight">
-                Greeen<span className="text-emerald-400">Publisher</span>
+                Triaksara<span className="text-amber-400">Publisher</span>
               </span>
             </Link>
             <p className="text-slate-400 mb-6 leading-relaxed">
@@ -43,7 +43,7 @@ export const Footer = () => {
               <li><Link href="/#tentang-kami" className="hover:text-primary transition-colors">Tim Kami</Link></li>
               <li><Link href="/#tentang-kami" className="hover:text-primary transition-colors">Karir</Link></li>
               <li><Link href="/#testimoni" className="hover:text-primary transition-colors">Testimoni</Link></li>
-              <li><a href="https://wa.me/628981669925" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">Hubungi Kami</a></li>
+              <li><a href="https://wa.me/6289502733564" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">Hubungi Kami</a></li>
             </ul>
           </div>
 
@@ -59,7 +59,7 @@ export const Footer = () => {
 
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm">
-            &copy; {new Date().getFullYear()} PT Greeenpublisher Indonesia. All rights reserved.
+            &copy; {new Date().getFullYear()} Triaksara Publisher. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-slate-500">
             <span>Dibuat dengan ❤️ untuk Akademisi Indonesia</span>

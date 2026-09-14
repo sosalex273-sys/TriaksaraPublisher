@@ -38,7 +38,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-lg">Telepon & WhatsApp</h4>
-                  <p className="text-slate-600 leading-relaxed">+62 898-1669-925 (Admin)</p>
+                  <p className="text-slate-600 leading-relaxed">+62 895-0273-3564 (Admin)</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -47,7 +47,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 text-lg">Email</h4>
-                  <p className="text-slate-600 leading-relaxed">info@greeenpublisher.id</p>
+                  <p className="text-slate-600 leading-relaxed">info@triaksarapublisher.id</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -70,7 +70,7 @@ export const Contact = () => {
           >
             <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50">
               <h3 className="text-2xl font-bold font-jakarta mb-6 text-slate-900">Kirim Pesan Cepat</h3>
-              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); window.open("https://wa.me/628981669925", "_blank"); }}>
+              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); window.open("https://wa.me/6289502733564", "_blank"); }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-700">Nama Lengkap</label>
@@ -89,7 +89,7 @@ export const Contact = () => {
                   <label className="text-sm font-medium text-slate-700">Pesan</label>
                   <textarea rows={4} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none" placeholder="Tulis pesan atau pertanyaan Anda..."></textarea>
                 </div>
-                <Button type="submit" className="w-full h-12 rounded-xl text-base mt-2 bg-green-500 hover:bg-green-600">
+                <Button type="submit" className="w-full h-12 rounded-xl text-base mt-2 bg-amber-600 hover:bg-amber-700">
                   Kirim Pesan via WhatsApp
                 </Button>
               </form>

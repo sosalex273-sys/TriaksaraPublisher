@@ -19,7 +19,7 @@ export const FAQ = () => {
               Pertanyaan yang Sering Diajukan
             </h2>
             <p className="text-sm md:text-lg text-slate-600 mb-8">
-              Temukan jawaban cepat untuk pertanyaan umum seputar layanan publikasi dan HKI di Greeenpublisher.
+              Temukan jawaban cepat untuk pertanyaan umum seputar layanan publikasi dan HKI di Triaksara Publisher.
             </p>
           </motion.div>
 

@@ -28,8 +28,8 @@ export const CTA = () => {
           
           <Button 
             size="lg" 
-            className="bg-green-500 hover:bg-green-600 text-white rounded-full h-16 px-10 text-lg font-bold shadow-[0_0_40px_-10px_rgba(34,197,94,0.5)] hover:scale-105 transition-all duration-300 gap-3"
-            onClick={() => window.open('https://wa.me/628981669925', '_blank')}
+            className="bg-amber-600 hover:bg-amber-700 text-white rounded-full h-16 px-10 text-lg font-bold shadow-[0_0_40px_-10px_rgba(201,162,39,0.5)] hover:scale-105 transition-all duration-300 gap-3"
+            onClick={() => window.open('https://wa.me/6289502733564', '_blank')}
           >
             <MessageCircle className="h-6 w-6" />
             Hubungi via WhatsApp
