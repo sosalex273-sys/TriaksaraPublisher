@@ -83,9 +83,9 @@ export const Hero = () => {
               {/* Image Container */}
               <div className="absolute bottom-0 w-[240px] h-[360px] md:w-[320px] md:h-[480px] bg-slate-100 rounded-t-[120px] md:rounded-t-[160px] shadow-2xl overflow-hidden border-[6px] md:border-8 border-white z-10 flex items-center justify-center">
                   <img 
-                    src="/images/hero.png" 
-                    alt="Konsultan Pendidikan Wanita Berhijab Kacamata" 
-                    className="w-full h-full object-cover object-[65%_top] scale-[1.15]" 
+                    src="/images/hero.png?v=2" 
+                    alt="Konsultan Pendidikan Laki-Laki Berpakaian Batik Emas" 
+                    className="w-full h-full object-cover object-[center_20%] scale-[1.08]" 
                   />
               </div>
 
