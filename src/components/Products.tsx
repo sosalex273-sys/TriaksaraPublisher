@@ -168,7 +168,7 @@ export const Products = () => {
   const waLink = "https://wa.me/6289502733564";
 
   return (
-    <section id="produk" className="py-12 md:py-20 lg:py-28 bg-amber-50/30">
+    <section id="produk" className="py-12 md:py-20 lg:py-28 bg-amber-50/30 dark:bg-slate-950 transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (
@@ -178,7 +178,7 @@ export const Products = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-3xl p-6 md:p-8 border border-amber-100/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full group"
+              className="bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 border border-amber-100/50 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full group"
             >
               {/* SVG Badge */}
               <div className="flex justify-center mb-8">
@@ -191,10 +191,10 @@ export const Products = () => {
 
               {/* Title & Description */}
               <div className="mb-4">
-                <h3 className="text-lg md:text-xl font-bold text-slate-900 font-jakarta leading-tight mb-3">
+                <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white font-jakarta leading-tight mb-3">
                   {product.title}
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed group-hover:text-slate-700 dark:group-hover:text-slate-200 transition-colors">
                   {product.description}
                 </p>
               </div>

@@ -40,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className="scroll-smooth">
-      <body className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased bg-slate-50 text-slate-900`}>
+    <html lang="id" className="dark scroll-smooth">
+      <body className={`${inter.variable} ${plusJakarta.variable} font-sans antialiased bg-slate-950 text-slate-100`}>
         {children}
       </body>
     </html>

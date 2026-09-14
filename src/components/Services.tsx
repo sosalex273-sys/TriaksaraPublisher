@@ -7,14 +7,14 @@ export const Services = () => {
   const waLink = "https://wa.me/6289502733564";
 
   return (
-    <section id="layanan" className="py-12 md:py-24 lg:py-32 bg-white">
+    <section id="layanan" className="py-12 md:py-24 lg:py-32 bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-slate-500 font-medium text-sm md:text-base mb-2"
+            className="text-slate-500 dark:text-slate-400 font-medium text-sm md:text-base mb-2"
           >
             Manfaatkan Segera Layanan Triaksara Publisher
           </motion.p>
@@ -23,7 +23,7 @@ export const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-2xl md:text-4xl lg:text-5xl font-bold font-jakarta text-slate-900"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold font-jakarta text-slate-900 dark:text-white"
           >
             Cepat, Mudah & Terpercaya
           </motion.h2>
@@ -35,7 +35,7 @@ export const Services = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white border border-slate-100 rounded-2xl p-6 md:p-8 flex flex-col shadow-xl shadow-slate-200/40 relative overflow-hidden group"
+            className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/80 rounded-2xl p-6 md:p-8 flex flex-col shadow-xl shadow-slate-200/40 dark:shadow-none relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[100px] -z-10 transition-transform group-hover:scale-110" />
             <h3 className="text-2xl font-bold text-slate-900 text-center mb-4 leading-tight font-jakarta">

@@ -9,15 +9,12 @@ export const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-1">
-            <Link href="#" className="flex items-center gap-2 md:gap-3 mb-6">
+            <Link href="#" className="inline-block mb-6">
               <Image 
                 src={logo} 
                 alt="Triaksara Publisher Logo" 
-                className="h-14 md:h-16 w-auto object-contain" 
+                className="h-24 md:h-32 lg:h-36 w-auto object-contain mb-2" 
               />
-              <span className="font-jakarta font-bold text-3xl text-white tracking-tight">
-                Triaksara<span className="text-amber-400">Publisher</span>
-              </span>
             </Link>
             <p className="text-slate-400 mb-6 leading-relaxed">
               Mitra publikasi akademik terpercaya yang memberikan layanan komprehensif mulai dari editing hingga penerbitan dengan standar internasional.
