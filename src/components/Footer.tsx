@@ -20,7 +20,7 @@ export const Footer = () => {
               Mitra publikasi akademik terpercaya yang memberikan layanan komprehensif mulai dari editing hingga penerbitan dengan standar internasional.
             </p>
             <p className="text-xs text-slate-400 leading-relaxed">
-              📍 <span className="font-semibold text-slate-300">Alamat:</span> Jl. Melati No. 12, Condongcatur, Depok, Sleman, D.I. Yogyakarta, 55283
+              📍 <span className="font-semibold text-slate-300">Domisili:</span> Jl. Melati No. 12, Condongcatur, Depok, Sleman, D.I. Yogyakarta, 55283
             </p>
 
           </div>

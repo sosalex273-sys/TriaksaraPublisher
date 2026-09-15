@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Contact = () => {
@@ -28,15 +28,15 @@ export const Contact = () => {
           viewport={{ once: true }}
           className="bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8">
             <div className="flex items-start gap-4">
               <div className="bg-amber-500/10 p-3.5 rounded-2xl text-amber-400 mt-1 shrink-0">
                 <MapPin className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="font-bold text-white text-lg mb-1 font-jakarta">Kantor Pusat</h4>
-                <p className="text-slate-300 text-sm md:text-base leading-relaxed">
-                  Jl. Melati No. 12, Condongcatur, Depok, Sleman, Daerah Istimewa Yogyakarta, 55283
+                <h4 className="font-bold text-white text-lg mb-1 font-jakarta">Domisili</h4>
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  Jl. Melati No. 12, Condongcatur, Depok, Sleman, D.I. Yogyakarta 55283
                 </p>
               </div>
             </div>
@@ -47,7 +47,7 @@ export const Contact = () => {
               </div>
               <div>
                 <h4 className="font-bold text-white text-lg mb-1 font-jakarta">Telepon & WhatsApp</h4>
-                <p className="text-slate-300 text-sm md:text-base leading-relaxed">+62 895-0273-3564 (Admin)</p>
+                <p className="text-slate-300 text-sm leading-relaxed">+62 895-0273-3564 (Admin)</p>
               </div>
             </div>
 
@@ -57,20 +57,7 @@ export const Contact = () => {
               </div>
               <div>
                 <h4 className="font-bold text-white text-lg mb-1 font-jakarta">Email Resmi</h4>
-                <p className="text-slate-300 text-sm md:text-base leading-relaxed">info@triaksarapublisher.id</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="bg-amber-500/10 p-3.5 rounded-2xl text-amber-400 mt-1 shrink-0">
-                <Clock className="h-6 w-6" />
-              </div>
-              <div>
-                <h4 className="font-bold text-white text-lg mb-1 font-jakarta">Jam Operasional</h4>
-                <p className="text-slate-300 text-sm md:text-base leading-relaxed">
-                  Senin - Jumat: 08.00 - 17.00 WIB<br />
-                  Sabtu: 08.00 - 14.00 WIB
-                </p>
+                <p className="text-slate-300 text-sm leading-relaxed">info@triaksarapublisher.id</p>
               </div>
             </div>
           </div>
