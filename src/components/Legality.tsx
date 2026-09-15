@@ -60,7 +60,7 @@ export const Legality = () => {
                     </div>
                     <div className="flex justify-between">
                       <span className="opacity-70">Domisili</span>
-                      <span className="font-medium text-white">Sleman, Yogyakarta</span>
+                      <span className="font-medium text-white">Sleman, D.I. Yogyakarta</span>
                     </div>
                   </div>
                </div>
