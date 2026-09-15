@@ -32,6 +32,8 @@ import { Footer } from "@/components/Footer";
 import { MediaPartner } from "@/components/MediaPartner";
 import { Header } from "@/components/Header";
 
+import { Contact } from "@/components/Contact";
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden">
@@ -52,6 +54,7 @@ export default function Home() {
       <Testimonial />
       <FAQ />
 
+      <Contact />
       <MediaPartner />
       <CTA />
       <Footer />

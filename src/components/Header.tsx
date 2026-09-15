@@ -33,35 +33,35 @@ export const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-slate-900/95 backdrop-blur-md shadow-lg py-3 border-b border-slate-800"
-          : "bg-slate-950/80 backdrop-blur-md py-4 border-b border-slate-900/50"
+          ? "bg-slate-900/95 backdrop-blur-md shadow-md py-2 border-b border-slate-800"
+          : "bg-slate-950/85 backdrop-blur-md py-2.5 border-b border-slate-900/50"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <Link href="#" className="flex items-center">
+          <Link href="#" className="flex items-center py-1">
             <Image 
               src={logo} 
               alt="Triaksara Publisher Logo" 
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-transform hover:scale-105"
+              className="h-11 md:h-13 lg:h-15 w-auto object-contain transition-transform hover:scale-105"
             />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            <ul className="flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+            <ul className="flex items-center gap-6 lg:gap-8">
               {navLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-base font-semibold text-slate-200 hover:text-amber-400 transition-colors"
+                    className="text-sm lg:text-base font-semibold text-slate-200 hover:text-amber-400 transition-colors"
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <Button className="rounded-full px-7 py-2.5 text-base font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 shadow-lg shadow-amber-500/25 transition-transform hover:scale-105" onClick={() => window.open('https://wa.me/6289502733564', '_blank')}>
+            <Button className="rounded-full px-6 py-2 text-sm lg:text-base font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 shadow-md shadow-amber-500/20 transition-transform hover:scale-105" onClick={() => window.open('https://wa.me/6289502733564', '_blank')}>
               Konsultasi Sekarang
             </Button>
           </nav>

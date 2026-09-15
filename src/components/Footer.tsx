@@ -16,8 +16,11 @@ export const Footer = () => {
                 className="h-24 md:h-32 lg:h-36 w-auto object-contain mb-2" 
               />
             </Link>
-            <p className="text-slate-400 mb-6 leading-relaxed">
+            <p className="text-slate-400 mb-4 leading-relaxed text-sm">
               Mitra publikasi akademik terpercaya yang memberikan layanan komprehensif mulai dari editing hingga penerbitan dengan standar internasional.
+            </p>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              📍 <span className="font-semibold text-slate-300">Alamat:</span> Jl. Melati No. 12, Condongcatur, Depok, Sleman, D.I. Yogyakarta, 55283
             </p>
 
           </div>
