@@ -41,7 +41,6 @@ export default function Home() {
       <Hero />
       <Services />
       <Products />
-      <CallForPaper />
       <Institutions />
       <Partner />
       <Statistics />
