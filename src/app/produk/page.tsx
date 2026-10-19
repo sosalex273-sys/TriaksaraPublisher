@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { CheckCircle2 as CheckCircle2Icon, MessageCircle as MessageCircleIcon, ArrowRight, ArrowLeft } from 'lucide-react';
 
 export default function ProdukPage() {
-  const waLink = "https://wa.me/6289502733564";
+  const waLink = "https://wa.me/6281528476713";
 
   const packages = [
     {

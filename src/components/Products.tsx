@@ -165,7 +165,7 @@ const products = [
 ];
 
 export const Products = () => {
-  const waLink = "https://wa.me/6289502733564";
+  const waLink = "https://wa.me/6281528476713";
 
   return (
     <section id="produk" className="py-12 md:py-20 lg:py-28 bg-amber-50/30 dark:bg-slate-950 transition-colors duration-300">

@@ -47,7 +47,7 @@ export const Contact = () => {
               </div>
               <div>
                 <h4 className="font-bold text-white text-lg mb-1 font-jakarta">Telepon & WhatsApp</h4>
-                <p className="text-slate-300 text-sm md:text-base leading-relaxed">+62 895-0273-3564 (Admin)</p>
+                <p className="text-slate-300 text-sm md:text-base leading-relaxed">+62 815-2847-6713 (Admin)</p>
               </div>
             </div>
           </div>
@@ -56,7 +56,7 @@ export const Contact = () => {
             <Button
               size="lg"
               className="rounded-full px-8 py-3.5 text-base font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 shadow-lg shadow-amber-500/20"
-              onClick={() => window.open("https://wa.me/6289502733564", "_blank")}
+              onClick={() => window.open("https://wa.me/6281528476713", "_blank")}
             >
               Konsultasi Sekarang via WhatsApp
             </Button>

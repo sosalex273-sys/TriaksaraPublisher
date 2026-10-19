@@ -61,7 +61,7 @@ export const Header = () => {
                 </li>
               ))}
             </ul>
-            <Button className="rounded-full px-6 py-2 text-sm lg:text-base font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 shadow-md shadow-amber-500/20 transition-transform hover:scale-105" onClick={() => window.open('https://wa.me/6289502733564', '_blank')}>
+            <Button className="rounded-full px-6 py-2 text-sm lg:text-base font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 shadow-md shadow-amber-500/20 transition-transform hover:scale-105" onClick={() => window.open('https://wa.me/6281528476713', '_blank')}>
               Konsultasi Sekarang
             </Button>
           </nav>
@@ -95,7 +95,7 @@ export const Header = () => {
               </li>
             ))}
           </ul>
-          <Button className="w-full rounded-full mt-2 bg-amber-600 hover:bg-amber-700 text-white" onClick={() => window.open('https://wa.me/6289502733564', '_blank')}>
+          <Button className="w-full rounded-full mt-2 bg-amber-600 hover:bg-amber-700 text-white" onClick={() => window.open('https://wa.me/6281528476713', '_blank')}>
             Konsultasi Sekarang
           </Button>
         </div>

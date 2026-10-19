@@ -79,7 +79,7 @@ const FlyerCard = ({ imgUrl, onError, onClick }: { imgUrl: string, onError: () =
     {/* Address/Contact Footer */}
     <div className="w-full bg-amber-950 text-white py-2 px-3 flex flex-col justify-center items-center text-center">
       <span className="text-[8px] font-bold uppercase tracking-widest text-amber-400 mb-1">Layanan Publikasi Jurnal</span>
-      <span className="text-[9px] font-medium opacity-90 mb-0.5">WhatsApp: +62 895-0273-3564</span>
+      <span className="text-[9px] font-medium opacity-90 mb-0.5">WhatsApp: +62 815-2847-6713</span>
       <span className="text-[8px] font-light text-slate-300 leading-tight">Greenland Sendang Residence<br/>Blok D2 Sendang</span>
     </div>
   </div>
@@ -213,7 +213,7 @@ export const CallForPaper = () => {
               {/* Address Overlay on Zoomed Image */}
               <div className="absolute bottom-0 left-0 w-full bg-amber-950 text-white py-4 px-6 z-10 flex flex-col justify-center items-center text-center rounded-b-lg border-t border-slate-700/50">
                 <span className="text-sm font-bold uppercase tracking-widest text-amber-400 mb-2">Layanan Publikasi Jurnal</span>
-                <span className="text-base font-medium opacity-90 mb-1">WhatsApp: +62 895-0273-3564</span>
+                <span className="text-base font-medium opacity-90 mb-1">WhatsApp: +62 815-2847-6713</span>
                 <span className="text-xs font-light text-slate-300">Greenland Sendang Residence Blok D2 Sendang</span>
               </div>
             </div>
