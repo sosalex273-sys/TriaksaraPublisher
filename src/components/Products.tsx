@@ -126,8 +126,8 @@ const products = [
     badgeTop: "SINTA",
     badgeBottom: "INDEXED",
     badgeIcon: "sinta",
-    isPopular: false,
-    tag: "Akreditasi Resmi",
+    isPopular: true,
+    tag: "🔥 Paling Populer",
     features: [
       "Pemeriksaan Plagiasi Turnitin & Resepsi Template",
       "Asistensi Format Sesuai Author Guidelines OJS",
@@ -145,8 +145,8 @@ const products = [
     badgeTop: "SCOPUS",
     badgeBottom: "INDEXED",
     badgeIcon: "scopus",
-    isPopular: true,
-    tag: "👑 Rekomendasi Utama",
+    isPopular: false,
+    tag: "👑 Bereputasi Tinggi",
     features: [
       "Proofreading Mendalam Native English Speaker",
       "Bimbingan Jawaban & Revisi Respon Reviewer",
