@@ -62,7 +62,7 @@ export const Header = () => {
               ))}
             </ul>
             <Button className="rounded-full px-6 py-2 text-sm lg:text-base font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 shadow-md shadow-amber-500/20 transition-transform hover:scale-105" onClick={() => window.open('https://wa.me/6281528476713', '_blank')}>
-              Konsultasi Sekarang
+              Konsultasi Gratis Sekarang
             </Button>
           </nav>
 
@@ -70,7 +70,8 @@ export const Header = () => {
           <div className="flex items-center gap-3 md:hidden">
             <ThemeToggle />
             <button
-              className="text-slate-900 dark:text-white p-1"
+              aria-label="Toggle Menu"
+              className="text-white hover:text-amber-400 p-2 rounded-lg bg-slate-800/60 border border-slate-700/50 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -81,13 +82,13 @@ export const Header = () => {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-slate-900 shadow-lg border-t border-slate-100 dark:border-slate-800 py-4 px-4 flex flex-col gap-4">
-          <ul className="flex flex-col gap-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 py-5 px-5 shadow-2xl flex flex-col gap-4">
+          <ul className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="text-base font-medium text-slate-700 dark:text-slate-200 block py-2 border-b border-slate-50 dark:border-slate-800"
+                  className="text-base font-medium text-slate-200 hover:text-amber-400 hover:bg-slate-900/80 px-3 py-2.5 rounded-lg block transition-colors border-b border-slate-900/60"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -95,8 +96,8 @@ export const Header = () => {
               </li>
             ))}
           </ul>
-          <Button className="w-full rounded-full mt-2 bg-amber-600 hover:bg-amber-700 text-white" onClick={() => window.open('https://wa.me/6281528476713', '_blank')}>
-            Konsultasi Sekarang
+          <Button className="w-full rounded-full py-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold shadow-md shadow-amber-500/20" onClick={() => window.open('https://wa.me/6281528476713', '_blank')}>
+            Konsultasi Gratis Sekarang
           </Button>
         </div>
       )}

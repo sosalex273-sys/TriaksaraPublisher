@@ -7,249 +7,302 @@ export const Services = () => {
   const waLink = "https://wa.me/6281528476713";
 
   return (
-    <section id="layanan" className="py-12 md:py-24 lg:py-32 bg-white dark:bg-slate-900 transition-colors duration-300">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
+    <section id="layanan" className="py-16 md:py-24 lg:py-28 bg-slate-900/60 dark:bg-slate-950 text-white relative overflow-hidden">
+      {/* Ambient Glows */}
+      <div className="absolute top-1/4 -left-40 w-96 h-96 bg-amber-500/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-40 w-96 h-96 bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-slate-500 dark:text-slate-400 font-medium text-sm md:text-base mb-2"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-400 font-semibold text-xs sm:text-sm mb-3.5 border border-amber-500/20 shadow-sm"
           >
-            Manfaatkan Segera Layanan Triaksara Publisher
-          </motion.p>
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
+            <span>Ekosistem Layanan Publikasi & Karir Akademik</span>
+          </motion.div>
+
           <motion.h2
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-2xl md:text-4xl lg:text-5xl font-bold font-jakarta text-slate-900 dark:text-white"
+            className="text-2xl sm:text-4xl md:text-5xl font-bold font-jakarta text-white tracking-tight mb-4"
           >
-            Cepat, Mudah & Terpercaya
+            Satu Solusi Untuk <span className="text-gradient">Semua Kebutuhan Riset Anda</span>
           </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 }}
+            className="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed"
+          >
+            Pilih jalur pendampingan yang tepat untuk akselerasi syarat kelulusan, angka kredit dosen (PAK/JAD), hingga rekognisi internasional bereputasi tinggi.
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {/* Card 1: Jurnal Nasional */}
+        {/* Bento Grid Container */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          {/* TILE 1: Flagship Scopus & WoS Hub (Span 2 Kolom di Desktop) */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/80 rounded-2xl p-6 md:p-8 flex flex-col shadow-xl shadow-slate-200/40 dark:shadow-none relative overflow-hidden group"
+            className="lg:col-span-2 relative rounded-3xl p-7 sm:p-9 bg-gradient-to-br from-slate-800/90 via-slate-900 to-slate-950 border border-slate-700/80 shadow-2xl overflow-hidden group hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between"
           >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[100px] -z-10 transition-transform group-hover:scale-110" />
-            <h3 className="text-2xl font-bold text-slate-900 text-center mb-4 leading-tight font-jakarta">
-              Terbitkan Artikel<br />Ilmiah di Tingkat<br />Nasional
-            </h3>
-            <p className="text-sm text-slate-600 text-center mb-8 leading-relaxed">
-              Triaksara Publisher menyediakan layanan bimbingan publikasi artikel jurnal di tingkat Nasional (Garuda, Moraref dan Sinta 1-6) dengan kualitas unggul.
-            </p>
-            
-            <div className="bg-white p-4 rounded-lg mb-8 flex flex-col justify-center gap-4 shadow-sm min-h-[120px] w-full border border-slate-200">
-              {/* Row 1: Sinta & Moraref */}
-              <div className="flex justify-between items-center px-2">
-                {/* Sinta Replica */}
-                <div className="flex flex-col">
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-6 h-6 rounded-full bg-[#113d52] flex items-center justify-center text-white text-[10px] font-bold shrink-0">S</div>
-                    <span className="font-bold text-[#113d52] text-2xl tracking-tighter leading-none font-serif">sinta</span>
-                  </div>
-                  <span className="text-[#f39c12] text-[6px] font-bold tracking-widest pl-7 mt-0.5 uppercase">Science and Technology Index</span>
-                </div>
-                {/* Moraref Replica */}
-                <div className="flex flex-col items-center">
-                  <BookOpen className="w-6 h-6 text-[#16a085]" />
-                  <span className="text-[#16a085] text-[10px] font-bold tracking-wider mt-0.5">MORAREF</span>
-                </div>
+            {/* Visual Glass Glow */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-amber-500/15 via-blue-500/10 to-transparent rounded-bl-full pointer-events-none -z-0" />
+
+            <div className="relative z-10">
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
+                <span className="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-slate-950 shadow-md">
+                  ★ Flagship Program
+                </span>
+                <span className="flex items-center gap-1.5 text-xs text-emerald-400 font-semibold bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  Fast-Track 2026 Dibuka
+                </span>
               </div>
-              
-              {/* Row 2: Garuda & Google Scholar */}
-              <div className="flex justify-between items-center px-2 mt-2">
-                {/* Garuda Replica */}
-                <div className="flex items-center gap-1.5">
-                  <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white italic font-serif font-bold text-xs">G</div>
-                  <div className="flex flex-col">
-                    <span className="font-black text-black text-lg tracking-tighter leading-none">GARUDA</span>
-                    <span className="text-gray-400 text-[5px] font-bold tracking-widest mt-0.5 uppercase">Garba Rujukan Digital</span>
-                  </div>
+
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-jakarta mb-3 leading-tight">
+                Publikasi Jurnal Internasional Bereputasi <span className="text-amber-400">(Scopus & WoS)</span>
+              </h3>
+
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-6 max-w-2xl">
+                Layanan pendampingan naskah kasta tertinggi bagi Dosen & Mahasiswa S3/Doktoral. Ditangani langsung oleh tim editor native speaker dan pakar bidang riset untuk menembus jurnal Scopus Q1–Q4 serta Clarivate Analytics (WoS).
+              </p>
+
+              {/* Feature Highlights Grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-4 border-y border-slate-800 mb-6">
+                <div className="p-3 rounded-2xl bg-slate-800/60 border border-slate-700/50">
+                  <p className="text-xs text-slate-400 mb-0.5">Tier Target</p>
+                  <p className="text-sm sm:text-base font-bold text-amber-400">Q1, Q2, Q3, Q4</p>
                 </div>
-                {/* Google Scholar Replica */}
-                <div className="flex items-center gap-1.5">
-                  <div className="w-6 h-6 bg-blue-500 rounded flex items-center justify-center text-white font-bold font-serif text-lg">g</div>
-                  <div className="flex flex-col">
-                    <span className="font-bold text-blue-500 text-sm tracking-tight leading-none">Google</span>
-                    <span className="text-blue-500 text-[8px] font-medium tracking-wide mt-0.5">Scholar</span>
-                  </div>
+                <div className="p-3 rounded-2xl bg-slate-800/60 border border-slate-700/50">
+                  <p className="text-xs text-slate-400 mb-0.5">Bahasa</p>
+                  <p className="text-sm sm:text-base font-bold text-white">Native Proofread</p>
+                </div>
+                <div className="p-3 rounded-2xl bg-slate-800/60 border border-slate-700/50">
+                  <p className="text-xs text-slate-400 mb-0.5">Revisi Reviewer</p>
+                  <p className="text-sm sm:text-base font-bold text-white">Dibimbing Tuntas</p>
+                </div>
+                <div className="p-3 rounded-2xl bg-slate-800/60 border border-slate-700/50">
+                  <p className="text-xs text-slate-400 mb-0.5">Acceptance</p>
+                  <p className="text-sm sm:text-base font-bold text-emerald-400">99.4% Sukses</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-auto">
-              <a 
+            <div className="relative z-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-2">
+              <div className="flex items-center gap-4 text-xs text-slate-400">
+                <span>Terindeks di:</span>
+                <span className="font-bold text-white">Scopus</span>
+                <span>•</span>
+                <span className="font-bold text-white">Web of Science</span>
+                <span>•</span>
+                <span className="font-bold text-white">EBSCO</span>
+              </div>
+              <a
                 href={waLink}
                 target="_blank"
                 rel="noreferrer"
-                className="block w-full text-center py-3.5 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors shadow-md"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/20 transition-all hover:scale-105"
               >
-                Publikasikan Sekarang
+                <span>Konsultasikan Scopus</span>
+                <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </motion.div>
 
-          {/* Card 2: Jurnal Internasional (Highlighted) */}
+          {/* TILE 2: SINTA Fast-Track Hub (1 Kolom) */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-primary rounded-2xl p-6 md:p-8 flex flex-col shadow-2xl shadow-primary/30 transform md:-translate-y-4 relative overflow-hidden"
+            className="rounded-3xl p-7 bg-slate-800/80 border border-slate-700/80 shadow-xl flex flex-col justify-between group hover:border-amber-500/40 transition-all duration-300 relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-bl-[100px] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-black/10 rounded-tr-[100px] pointer-events-none" />
-            
-            <h3 className="text-2xl font-bold text-white text-center mb-4 leading-tight font-jakarta relative z-10">
-              Terbitkan Artikel<br />Ilmiah di Tingkat<br />Internasional
-            </h3>
-            <p className="text-sm text-white/90 text-center mb-8 leading-relaxed relative z-10">
-              Triaksara Publisher memberikan layanan publikasi artikel jurnal di tingkat Internasional Bereputasi tinggi (Scopus, WOS, dll) dengan pendampingan ekstra.
-            </p>
-            
-            <div className="bg-white p-4 rounded-lg mb-8 flex flex-col justify-center gap-4 shadow-sm min-h-[160px] w-full relative z-10 border border-slate-200">
-              {/* Row 1: Scopus */}
-              <div className="flex justify-center w-full mb-2">
-                <span className="font-sans text-[#e67e22] text-4xl tracking-tighter font-semibold">
-                  Scopus<sup className="text-sm font-normal">®</sup>
+            <div>
+              <div className="flex items-center justify-between mb-5">
+                <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                  Akreditasi Nasional
                 </span>
-              </div>
-              
-              {/* Row 2: WorldCat, ICI, Harvard */}
-              <div className="flex justify-between items-center w-full px-1">
-                <div className="flex items-center gap-1">
-                  <Globe className="w-3 h-3 text-[#27ae60]" />
-                  <span className="text-[#34495e] text-[10px] font-bold">WorldCat<sup className="text-[6px]">®</sup></span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <span className="text-[#c0392b] font-serif font-bold text-xs italic">ICI</span>
-                  <div className="flex flex-col leading-none">
-                    <span className="text-black text-[6px] font-bold">JOURNALS</span>
-                    <span className="text-black text-[6px] font-bold">MASTER LIST</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-1">
-                  <div className="w-3 h-4 bg-[#c0392b] text-white text-[5px] flex items-center justify-center font-serif">VE</div>
-                  <div className="flex flex-col leading-none">
-                    <span className="text-black text-[7px] font-bold">HARVARD</span>
-                    <span className="text-gray-500 text-[6px]">LIBRARY</span>
-                  </div>
-                </div>
+                <span className="text-xl font-black text-amber-400">SINTA 1–6</span>
               </div>
 
-              {/* Row 3: EUDL, DOAJ, EBSCO */}
-              <div className="flex justify-between items-center w-full px-1">
-                <div className="flex flex-col">
-                  <span className="text-[#2980b9] font-black text-xs tracking-tighter">EUDL</span>
-                  <span className="text-gray-400 text-[4px] uppercase">European Union Digital Library</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <span className="text-[#f39c12] font-light text-sm tracking-widest">DOAJ</span>
-                  <div className="flex flex-col leading-none">
-                    <span className="text-black text-[4px] uppercase">Directory of</span>
-                    <span className="text-black text-[4px] uppercase font-bold">Open Access</span>
-                    <span className="text-black text-[4px] uppercase font-bold">Journals</span>
-                  </div>
-                </div>
-                <div className="bg-[#0e4b85] text-white px-1.5 py-0.5 rounded-sm">
-                  <span className="font-serif font-bold text-[10px] tracking-widest">EBSCO</span>
-                </div>
-              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-white font-jakarta mb-2.5">
+                Publikasi Jurnal Nasional SINTA
+              </h3>
 
-              {/* Row 4: Clarivate, Dimensions, Crossref */}
-              <div className="flex justify-between items-center w-full px-1 mt-1">
-                <div className="flex items-center gap-1">
-                  <div className="w-3 h-3 rounded-tr-full rounded-bl-full bg-gradient-to-br from-[#1abc9c] to-[#9b59b6]"></div>
-                  <div className="flex flex-col leading-none">
-                    <span className="text-black text-[9px] font-black tracking-tight">Clarivate</span>
-                    <span className="text-black text-[7px]">Analytics</span>
-                  </div>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                Rekomendasi utama untuk luaran skripsi, tesis, dan syarat kenaikan jabatan fungsional Asisten Ahli hingga Lektor.
+              </p>
+
+              {/* Checklist Bento */}
+              <div className="space-y-2.5 mb-8">
+                <div className="flex items-start gap-2.5 text-xs text-slate-200">
+                  <span className="text-amber-400 font-bold">✓</span>
+                  <span>Uji Plagiasi Turnitin Resmi (&lt; 15%)</span>
                 </div>
-                <div className="flex items-center gap-1">
-                  <div className="w-3 h-3 bg-gradient-to-tr from-yellow-400 via-pink-500 to-blue-500 clip-hexagon"></div>
-                  <span className="text-gray-600 text-[10px] font-medium">Dimensions</span>
+                <div className="flex items-start gap-2.5 text-xs text-slate-200">
+                  <span className="text-amber-400 font-bold">✓</span>
+                  <span>Penyesuaian Template & Gaya Selingkung</span>
                 </div>
-                <div className="flex items-center gap-1">
-                  <div className="flex">
-                    <div className="w-2 h-2 bg-blue-500 rounded-sm"></div>
-                    <div className="w-2 h-2 bg-yellow-500 rounded-sm -ml-1 mt-1"></div>
-                  </div>
-                  <span className="text-black text-[10px] font-bold">Crossref</span>
+                <div className="flex items-start gap-2.5 text-xs text-slate-200">
+                  <span className="text-amber-400 font-bold">✓</span>
+                  <span>Garansi Letter of Acceptance (LoA) Resmi</span>
+                </div>
+                <div className="flex items-start gap-2.5 text-xs text-slate-200">
+                  <span className="text-amber-400 font-bold">✓</span>
+                  <span>Tracking Progress Transparan</span>
                 </div>
               </div>
             </div>
 
-            <div className="mt-auto relative z-10">
-              <a 
+            <div className="pt-4 border-t border-slate-700/60">
+              <a
                 href={waLink}
                 target="_blank"
                 rel="noreferrer"
-                className="block w-full text-center py-3.5 rounded-xl bg-white text-primary font-bold hover:bg-slate-50 transition-colors shadow-lg"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-bold text-xs sm:text-sm transition-colors"
               >
-                Publikasikan Sekarang
+                <span>Pilih Slot SINTA 1–6</span>
+                <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </motion.div>
 
-          {/* Card 3: Konsultasi Karir */}
+          {/* TILE 3: Copernicus & Global Citation (1 Kolom) */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 }}
+            className="rounded-3xl p-7 bg-slate-800/80 border border-slate-700/80 shadow-xl flex flex-col justify-between group hover:border-amber-500/40 transition-all duration-300"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-5">
+                <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-teal-500/10 text-teal-400 border border-teal-500/20">
+                  Jurnal Internasional
+                </span>
+                <span className="text-xs font-bold text-slate-400">ICI & EBSCO</span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-bold text-white font-jakarta mb-2.5">
+                Copernicus, EBSCO & DOAJ
+              </h3>
+
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                Tingkatkan indexasi global dan sitasi artikel ilmiah Anda di pangkalan data terakreditasi internasional dengan biaya terjangkau.
+              </p>
+
+              <div className="space-y-2.5 mb-8">
+                <div className="flex items-start gap-2.5 text-xs text-slate-200">
+                  <span className="text-teal-400 font-bold">✓</span>
+                  <span>Terdaftar di Index Copernicus Master List</span>
+                </div>
+                <div className="flex items-start gap-2.5 text-xs text-slate-200">
+                  <span className="text-teal-400 font-bold">✓</span>
+                  <span>EBSCO Host Research Database</span>
+                </div>
+                <div className="flex items-start gap-2.5 text-xs text-slate-200">
+                  <span className="text-teal-400 font-bold">✓</span>
+                  <span>Translasi & Academic Grammar Check</span>
+                </div>
+                <div className="flex items-start gap-2.5 text-xs text-slate-200">
+                  <span className="text-teal-400 font-bold">✓</span>
+                  <span>Penerbitan Cepat & Sertifikat Publikasi</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-slate-700/60">
+              <a
+                href={waLink}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-bold text-xs sm:text-sm transition-colors"
+              >
+                <span>Publikasi Internasional Terindeks</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </motion.div>
+
+          {/* TILE 4: Career & JAD Roadmap (Span 2 Kolom di Desktop) */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white border border-slate-100 rounded-2xl p-6 md:p-8 flex flex-col shadow-xl shadow-slate-200/40 relative overflow-hidden group"
+            className="lg:col-span-2 rounded-3xl p-7 sm:p-9 bg-gradient-to-r from-slate-900 via-slate-850 to-slate-800 border border-slate-700/80 shadow-2xl flex flex-col justify-between group hover:border-blue-500/40 transition-all duration-300"
           >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[100px] -z-10 transition-transform group-hover:scale-110" />
-            <h3 className="text-2xl font-bold text-slate-900 text-center mb-4 leading-tight font-jakarta">
-              Konsultasi Karir<br />untuk Dosen /<br />Tenaga Pengajar
-            </h3>
-            <p className="text-sm text-slate-600 text-center mb-8 leading-relaxed">
-              Triaksara Publisher menawarkan layanan pendampingan karir bagi Dosen terkait dengan pemenuhan angka kredit dan proyeksi kenaikan JAD.
-            </p>
-            
-            <div className="mb-8 flex items-center justify-center p-4 rounded-xl bg-slate-50 border border-slate-100 mt-auto">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
-                  <GraduationCap className="w-6 h-6" />
+            <div>
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-5">
+                <span className="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                  🎓 Akselerasi Dosen & Peneliti
+                </span>
+                <span className="text-xs text-slate-400 font-medium">Pemenuhan BKD & PAK</span>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-bold text-white font-jakarta mb-3">
+                Klinik Karir & Pemenuhan Angka Kredit <span className="text-blue-400">(JAD/PAK)</span>
+              </h3>
+
+              <p className="text-sm text-slate-300 leading-relaxed mb-6 max-w-2xl">
+                Bimbingan terpadu pemenuhan Angka Kredit Kumulatif dan konversi publikasi untuk percepatan kenaikan jabatan fungsional akademik dari jenjang awal hingga Profesor.
+              </p>
+
+              {/* Career Milestone Steps */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-4 border-t border-slate-800 mb-6">
+                <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700 flex flex-col">
+                  <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest">Tahap 1</span>
+                  <span className="font-bold text-white text-sm sm:text-base mt-1">Asisten Ahli</span>
+                  <span className="text-[11px] text-slate-400 mt-1">SINTA 3–6 / Prosiding</span>
                 </div>
-                <div>
-                  <span className="block font-bold text-slate-900 text-sm">Raih Puncak Karir</span>
-                  <span className="block text-xs text-slate-500">Bersama Tim Ahli Kami!</span>
+                <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700 flex flex-col">
+                  <span className="text-[10px] font-black text-amber-400 uppercase tracking-widest">Tahap 2</span>
+                  <span className="font-bold text-white text-sm sm:text-base mt-1">Lektor</span>
+                  <span className="text-[11px] text-slate-400 mt-1">SINTA 1–2 / WoS</span>
+                </div>
+                <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700 flex flex-col">
+                  <span className="text-[10px] font-black text-purple-400 uppercase tracking-widest">Tahap 3</span>
+                  <span className="font-bold text-white text-sm sm:text-base mt-1">Lektor Kepala</span>
+                  <span className="text-[11px] text-slate-400 mt-1">Scopus Q3–Q4 / First Author</span>
+                </div>
+                <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700 flex flex-col">
+                  <span className="text-[10px] font-black text-emerald-400 uppercase tracking-widest">Tahap 4</span>
+                  <span className="font-bold text-white text-sm sm:text-base mt-1">Guru Besar</span>
+                  <span className="text-[11px] text-slate-400 mt-1">Scopus Q1–Q2 Bereputasi</span>
                 </div>
               </div>
             </div>
 
-            <div className="mt-auto">
-              <a 
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-2">
+              <span className="text-xs text-slate-400">
+                Didampingi oleh asesor dan praktisi perguruan tinggi berpengalaman.
+              </span>
+              <a
                 href={waLink}
                 target="_blank"
                 rel="noreferrer"
-                className="block w-full text-center py-3.5 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors shadow-md"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm transition-colors shadow-lg shadow-blue-600/20"
               >
-                Konsultasi Sekarang
+                <span>Konsultasikan Kenaikan Pangkat</span>
+                <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </motion.div>
+
         </div>
-        
-        {/* View All Services Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 text-center"
-        >
-          <a href="#layanan-lainnya" className="inline-flex items-center text-primary font-medium hover:underline">
-            Lihat Semua Layanan Kami <ArrowRight className="ml-2 w-4 h-4" />
-          </a>
-        </motion.div>
+
       </div>
     </section>
   );

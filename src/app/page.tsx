@@ -31,6 +31,7 @@ import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { MediaPartner } from "@/components/MediaPartner";
 import { Header } from "@/components/Header";
+import { ConsultantSection } from "@/components/ConsultantSection";
 
 import { Contact } from "@/components/Contact";
 
@@ -39,6 +40,7 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden">
       <Header />
       <Hero />
+      <ConsultantSection />
       <Services />
       <Products />
       <Institutions />

@@ -132,45 +132,95 @@ const GoldBadge = ({ topText, bottomText, iconType }: { topText: string, bottomT
 const products = [
   {
     id: 1,
-    title: "Jurnal Nasional Terakreditasi Sinta",
-    description: "Publikasi di jurnal nasional terakreditasi SINTA 1-6 dengan pendampingan penuh.",
+    title: "Jurnal Nasional SINTA 1–6",
+    description: "Publikasi bergaransi di jurnal terakreditasi Kemendikbudristek dari SINTA 1 hingga SINTA 6.",
     badgeTop: "SINTA",
-    badgeBottom: "ACCREDITED",
-    badgeIcon: "sinta"
+    badgeBottom: "INDEXED",
+    badgeIcon: "sinta",
+    features: [
+      "Pemeriksaan Plagiasi Turnitin",
+      "Asistensi Format & Template",
+      "Garansi LoA Resmi Terbit"
+    ]
   },
   {
     id: 2,
     title: "Jurnal Internasional Copernicus",
-    description: "Terbitkan artikel di jurnal internasional terindeks Index Copernicus.",
+    description: "Pilihan tepat untuk luaran riset pascasarjana dan penguatan portofolio ilmiah bereputasi.",
     badgeTop: "COPERNICUS",
     badgeBottom: "INDEXED",
-    badgeIcon: "copernicus"
+    badgeIcon: "copernicus",
+    features: [
+      "Terindeks Index Copernicus (ICI)",
+      "Bimbingan Peer-Review",
+      "Tracking Naskah Real-Time"
+    ]
   },
   {
     id: 3,
     title: "Jurnal Internasional EBSCO",
-    description: "Tingkatkan peluang diterima di jurnal internasional terindeks EBSCO untuk karier global.",
+    description: "Tingkatkan sitasi riset Anda di database akademik global EBSCO Host untuk karir internasional.",
     badgeTop: "EBSCO",
     badgeBottom: "INDEXED",
-    badgeIcon: "ebsco"
+    badgeIcon: "ebsco",
+    features: [
+      "Translasi & Proofreading Naskah",
+      "Standarisasi Metodologi",
+      "Sertifikat & Administrasi Lengkap"
+    ]
   },
   {
     id: 4,
     title: "Jurnal Internasional Scopus",
-    description: "Publikasi di jurnal Scopus Q1-Q4 dengan editor profesional.",
+    description: "Publikasi Scopus Q1–Q4 untuk syarat kelulusan Doktor (S3) & kenaikan jabatan Guru Besar.",
     badgeTop: "SCOPUS",
     badgeBottom: "INDEXED",
-    badgeIcon: "scopus"
+    badgeIcon: "scopus",
+    features: [
+      "Proofreading Native Speaker",
+      "Pengawalan Respon Reviewer",
+      "Garansi Terbit di Scopus Database"
+    ]
   }
 ];
 
 export const Products = () => {
-  const waLink = "https://wa.me/6281528476713";
-
   return (
-    <section id="produk" className="py-12 md:py-20 lg:py-28 bg-amber-50/30 dark:bg-slate-950 transition-colors duration-300">
+    <section id="produk" className="py-14 md:py-24 bg-amber-50/30 dark:bg-slate-950 transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        {/* Section Heading */}
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 font-semibold text-xs sm:text-sm mb-3 border border-amber-500/20"
+          >
+            <span>Pilihan Indeksasi Riset</span>
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-jakarta text-slate-900 dark:text-white tracking-tight mb-4"
+          >
+            Paket Publikasi Berdasarkan <span className="text-gradient">Target Indeksasi</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 }}
+            className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed"
+          >
+            Sesuaikan manuskrip Anda dengan target luaran penelitian, syarat kelulusan magister/doktoral, maupun syarat khusus kenaikan jabatan fungsional dosen.
+          </motion.p>
+        </div>
+
+        {/* Product Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -178,10 +228,10 @@ export const Products = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 border border-amber-100/50 dark:border-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col h-full group"
+              className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-7 border border-amber-100/60 dark:border-slate-800 shadow-lg shadow-slate-100 dark:shadow-none hover:shadow-2xl hover:border-amber-500/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full group"
             >
               {/* SVG Badge */}
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-6">
                 <GoldBadge 
                   topText={product.badgeTop} 
                   bottomText={product.badgeBottom} 
@@ -191,21 +241,32 @@ export const Products = () => {
 
               {/* Title & Description */}
               <div className="mb-4">
-                <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white font-jakarta leading-tight mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-jakarta leading-snug mb-2.5">
                   {product.title}
                 </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed group-hover:text-slate-700 dark:group-hover:text-slate-200 transition-colors">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
                   {product.description}
                 </p>
+
+                {/* Features Checklist */}
+                <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 space-y-2">
+                  {product.features.map((feat, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <span className="text-amber-500 text-xs font-black mt-0.5">✓</span>
+                      <span className="text-xs text-slate-600 dark:text-slate-400 font-medium leading-tight">{feat}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              {/* Link */}
-              <div className="mt-auto pt-6">
+              {/* Action Button */}
+              <div className="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800">
                 <a
                   href={`/produk#${product.badgeIcon}`}
-                  className="inline-flex items-center gap-1.5 text-[#C9A227] text-sm font-bold hover:text-amber-600 transition-colors"
+                  className="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-600 hover:text-slate-950 dark:text-amber-400 dark:hover:text-slate-950 text-xs sm:text-sm font-bold transition-all"
                 >
-                  Selengkapnya <ArrowRight className="w-4 h-4" />
+                  <span>Lihat Detail Paket</span>
+                  <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </motion.div>

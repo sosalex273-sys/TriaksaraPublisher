@@ -1,60 +1,119 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FileText, Search, PenTool, CheckSquare, Award } from "lucide-react";
+import { FileSearch, PenTool, Send, CheckCircle2, Award, GitBranch } from "lucide-react";
 
 export const PublicationFlow = () => {
   const steps = [
-    { icon: <FileText />, title: "Pengiriman Naskah", desc: "Kirim naskah mentah Anda kepada tim kami untuk tahap inisiasi." },
-    { icon: <Search />, title: "Review Awal", desc: "Pengecekan turnitin, kesesuaian template, dan kelayakan dasar." },
-    { icon: <PenTool />, title: "Editing & Formatting", desc: "Proses proofreading, translate, dan layouting sesuai standar publisher." },
-    { icon: <CheckSquare />, title: "Submit & Revisi", desc: "Pendampingan submit ke sistem jurnal dan panduan revisi dari reviewer." },
-    { icon: <Award />, title: "LoA & Publish", desc: "Menerima Letter of Acceptance dan naskah terbit secara online." }
+    { 
+      number: "01",
+      icon: FileSearch, 
+      title: "Analisis & Cek Turnitin", 
+      desc: "Evaluasi kesesuaian ruang lingkup (scope) naskah dan pemeriksaan similarity index bebas plagiasi." 
+    },
+    { 
+      number: "02",
+      icon: PenTool, 
+      title: "Format & Proofreading", 
+      desc: "Penyelarasan gaya selingkung (template) jurnal dan perbaikan tata bahasa baku oleh editor ahli." 
+    },
+    { 
+      number: "03",
+      icon: Send, 
+      title: "Submit ke Sistem Jurnal", 
+      desc: "Pengiriman resmi melalui sistem OJS / Editorial Manager jurnal target yang telah disepakati." 
+    },
+    { 
+      number: "04",
+      icon: CheckCircle2, 
+      title: "Pendampingan Revisi", 
+      desc: "Penyusunan tanggapan reviewer (Response to Reviewers) secara presisi hingga mendapat lampu hijau." 
+    },
+    { 
+      number: "05",
+      icon: Award, 
+      title: "LoA Resmi & Terbit Ber-DOI", 
+      desc: "Penerbitan Letter of Acceptance (LoA) resmi dan artikel terbit online dengan DOI terverifikasi." 
+    }
   ];
 
   return (
-    <section className="py-12 md:py-24 lg:py-32 bg-white">
-      <div className="container mx-auto px-4 md:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-16"
-        >
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold font-jakarta text-slate-900 mb-4">
-            Alur Publikasi Cepat & Mudah
-          </h2>
-          <p className="text-sm md:text-lg text-slate-600">
-            Kami menyederhanakan proses yang rumit menjadi langkah-langkah praktis dan transparan.
-          </p>
-        </motion.div>
+    <section className="py-16 md:py-24 lg:py-28 bg-slate-900/40 dark:bg-slate-950 border-t border-slate-200/60 dark:border-slate-800 transition-colors duration-300">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 font-semibold text-xs sm:text-sm mb-3 border border-amber-500/20"
+          >
+            <GitBranch className="w-4 h-4" />
+            <span>Alur Pendampingan Terstruktur</span>
+          </motion.div>
 
-        <div className="relative max-w-5xl mx-auto">
-          {/* Connecting Line (Desktop Only) */}
-          <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-slate-100 -translate-y-1/2 z-0" />
-          
-          <div className="flex flex-col md:flex-row justify-between relative z-10 gap-8 md:gap-4">
-            {steps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                className="flex flex-col items-center text-center max-w-[200px] mx-auto"
-              >
-                <div className="w-16 h-16 rounded-full bg-white border-4 border-slate-50 shadow-lg shadow-primary/10 flex items-center justify-center text-primary mb-6 relative">
-                  {step.icon}
-                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center border-2 border-white">
-                    {index + 1}
+          <motion.h2
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-jakarta text-slate-900 dark:text-white tracking-tight mb-4"
+          >
+            Alur Publikasi Ilmiah <span className="text-gradient">Cepat & Transparan</span>
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 }}
+            className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed"
+          >
+            Kami menyederhanakan alur birokrasi publikasi menjadi 5 tahapan praktis, transparan, dan dapat dipantau setiap saat.
+          </motion.p>
+        </div>
+
+        {/* Stepper Grid Container */}
+        <div className="relative">
+          {/* Connector Line (Desktop Only) */}
+          <div className="hidden lg:block absolute top-1/2 left-[5%] right-[5%] h-0.5 bg-gradient-to-r from-amber-500/20 via-amber-500 to-amber-500/20 -translate-y-8 z-0" />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-white dark:bg-slate-900/90 rounded-3xl p-6 border border-slate-200/80 dark:border-slate-800 shadow-lg hover:border-amber-500/40 transition-all duration-300 flex flex-col items-center text-center group"
+                >
+                  {/* Step Number & Icon */}
+                  <div className="relative mb-5">
+                    <div className="w-16 h-16 rounded-2xl bg-amber-500/10 dark:bg-slate-800 text-amber-500 dark:text-amber-400 flex items-center justify-center border-2 border-amber-500/30 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors duration-300 shadow-md">
+                      <Icon className="w-7 h-7" />
+                    </div>
+                    <span className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full bg-amber-500 text-slate-950 font-black text-[10px] shadow-sm">
+                      {step.number}
+                    </span>
                   </div>
-                </div>
-                <h3 className="font-bold text-slate-900 mb-2">{step.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{step.desc}</p>
-              </motion.div>
-            ))}
+
+                  <h3 className="font-bold text-slate-900 dark:text-white text-base sm:text-lg mb-2 font-jakarta leading-snug">
+                    {step.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    {step.desc}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
+
       </div>
     </section>
   );
