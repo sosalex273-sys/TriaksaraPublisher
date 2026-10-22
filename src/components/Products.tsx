@@ -1,12 +1,13 @@
 "use client";
 
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles, MessageCircle, ShieldCheck, Award, Zap } from "lucide-react";
 
 // Highly detailed SVG Component for the Gold Badge
 const GoldBadge = ({ topText, bottomText, iconType }: { topText: string, bottomText: string, iconType: string }) => {
   return (
-    <svg viewBox="0 0 100 100" className="w-24 h-24 sm:w-28 sm:h-28 drop-shadow-xl hover:scale-105 transition-transform duration-300">
+    <svg viewBox="0 0 100 100" className="w-20 h-20 sm:w-24 sm:h-24 drop-shadow-xl hover:scale-105 transition-transform duration-300 shrink-0">
       <defs>
         {/* Gradients to simulate 3D gold rim */}
         <linearGradient id="goldOuter" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -37,22 +38,16 @@ const GoldBadge = ({ topText, bottomText, iconType }: { topText: string, bottomT
 
       {/* Delicate Gold Laurels inside the black circle */}
       <g fill="none" stroke="url(#goldOuter)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-        {/* Left Laurel */}
         <path d="M 14 60 C 8 45 16 30 25 21" />
-        {/* Left Leaves (Outer) */}
         <path d="M 13 52 L 10 50 M 11.5 45 L 8.5 43 M 12 38 L 9 36 M 14 31 L 11 29 M 17 25 L 14 23" />
-        {/* Left Leaves (Inner) */}
         <path d="M 14.5 53 L 17.5 52 M 13.5 46 L 16.5 45 M 14.5 39 L 17.5 38 M 16 32 L 19 31 M 19 26 L 22 25" />
 
-        {/* Right Laurel */}
         <path d="M 86 60 C 92 45 84 30 75 21" />
-        {/* Right Leaves (Outer) */}
         <path d="M 87 52 L 90 50 M 88.5 45 L 91.5 43 M 88 38 L 91 36 M 86 31 L 89 29 M 83 25 L 86 23" />
-        {/* Right Leaves (Inner) */}
         <path d="M 85.5 53 L 82.5 52 M 86.5 46 L 83.5 45 M 85.5 39 L 82.5 38 M 84 32 L 81 31 M 81 26 L 78 25" />
       </g>
 
-      {/* Circular Texts (Gold text on black background) */}
+      {/* Circular Texts */}
       <text fill="url(#goldOuter)" fontSize="7" fontWeight="800" letterSpacing="1.2" fontFamily="Montserrat, system-ui, sans-serif">
         <textPath href="#topPath" startOffset="50%" textAnchor="middle">
           {topText}
@@ -64,12 +59,10 @@ const GoldBadge = ({ topText, bottomText, iconType }: { topText: string, bottomT
         </textPath>
       </text>
 
-      {/* Center Icons (Gold on Black) */}
+      {/* Center Icons */}
       <g transform="translate(50, 50)">
         {iconType === 'sinta' && (
-          // Sinta Wayang Head
           <g transform="scale(0.85) translate(0, 0)">
-            {/* The main solid gold head profile */}
             <path 
               d="
                 M 12,-15 
@@ -86,18 +79,12 @@ const GoldBadge = ({ topText, bottomText, iconType }: { topText: string, bottomT
               " 
               fill="url(#goldOuter)" 
             />
-            {/* Eye (cutout/dark line over the gold face) */}
             <path d="M -14,1 Q -9,6 -4,0" fill="none" stroke="#222" strokeWidth="2.5" strokeLinecap="round" />
-            
-            {/* Lower Neck Swoop 1 */}
             <path d="M -10,29 C 0,33 15,33 22,25" fill="none" stroke="url(#goldOuter)" strokeWidth="3" strokeLinecap="round" />
-            
-            {/* Lower Neck Swoop 2 */}
             <path d="M -5,35 C 5,37 15,35 20,30" fill="none" stroke="url(#goldOuter)" strokeWidth="2" strokeLinecap="round" />
           </g>
         )}
         {iconType === 'copernicus' && (
-          // Globe
           <g stroke="url(#goldOuter)" strokeWidth="2.5" fill="none" transform="scale(0.85) translate(0, 0)">
             <circle cx="0" cy="0" r="16" />
             <ellipse cx="0" cy="0" rx="6" ry="16" />
@@ -106,7 +93,6 @@ const GoldBadge = ({ topText, bottomText, iconType }: { topText: string, bottomT
           </g>
         )}
         {iconType === 'ebsco' && (
-          // EBSCO Oval logo
           <g transform="scale(1) translate(0, 0)">
             <ellipse cx="0" cy="0" rx="22" ry="10" fill="url(#goldOuter)" />
             <text x="0" y="3" fill="#111" fontSize="10" fontWeight="900" fontFamily="system-ui, -apple-system, sans-serif" textAnchor="middle" letterSpacing="0">
@@ -132,146 +118,291 @@ const GoldBadge = ({ topText, bottomText, iconType }: { topText: string, bottomT
 const products = [
   {
     id: 1,
-    title: "Jurnal Nasional SINTA 1–6",
-    description: "Publikasi bergaransi di jurnal terakreditasi Kemendikbudristek dari SINTA 1 hingga SINTA 6.",
+    title: "Jurnal Nasional SINTA",
+    subtitle: "SINTA 1 hingga SINTA 6",
+    level: "Akreditasi Nasional",
+    targetAudience: "Syarat BKD, Lektor & Lulus S2",
+    description: "Pendampingan publikasi bergaransi di jurnal terakreditasi resmi Kemendikbudristek untuk pemenuhan Angka Kredit PAK & BKD dosen.",
     badgeTop: "SINTA",
     badgeBottom: "INDEXED",
     badgeIcon: "sinta",
+    isPopular: false,
+    tag: "Akreditasi Resmi",
     features: [
-      "Pemeriksaan Plagiasi Turnitin",
-      "Asistensi Format & Template",
-      "Garansi LoA Resmi Terbit"
-    ]
-  },
-  {
-    id: 2,
-    title: "Jurnal Internasional Copernicus",
-    description: "Pilihan tepat untuk luaran riset pascasarjana dan penguatan portofolio ilmiah bereputasi.",
-    badgeTop: "COPERNICUS",
-    badgeBottom: "INDEXED",
-    badgeIcon: "copernicus",
-    features: [
-      "Terindeks Index Copernicus (ICI)",
-      "Bimbingan Peer-Review",
-      "Tracking Naskah Real-Time"
-    ]
-  },
-  {
-    id: 3,
-    title: "Jurnal Internasional EBSCO",
-    description: "Tingkatkan sitasi riset Anda di database akademik global EBSCO Host untuk karir internasional.",
-    badgeTop: "EBSCO",
-    badgeBottom: "INDEXED",
-    badgeIcon: "ebsco",
-    features: [
-      "Translasi & Proofreading Naskah",
-      "Standarisasi Metodologi",
-      "Sertifikat & Administrasi Lengkap"
+      "Pemeriksaan Plagiasi Turnitin & Resepsi Template",
+      "Asistensi Format Sesuai Author Guidelines OJS",
+      "Garansi LoA Resmi Terbit Tepat Waktu",
+      "Laporan Status Naskah Berkala"
     ]
   },
   {
     id: 4,
     title: "Jurnal Internasional Scopus",
-    description: "Publikasi Scopus Q1–Q4 untuk syarat kelulusan Doktor (S3) & kenaikan jabatan Guru Besar.",
+    subtitle: "Scopus Q1, Q2, Q3 & Q4",
+    level: "Internasional Bereputasi Tinggi",
+    targetAudience: "Syarat Kelulusan S3 & Guru Besar",
+    description: "Layanan flagship pengawalan artikel ilmiah ke jurnal bereputasi tinggi Scopus Elsevier hingga terbit di pangkalan data resmi.",
     badgeTop: "SCOPUS",
     badgeBottom: "INDEXED",
     badgeIcon: "scopus",
+    isPopular: true,
+    tag: "👑 Rekomendasi Utama",
     features: [
-      "Proofreading Native Speaker",
-      "Pengawalan Respon Reviewer",
-      "Garansi Terbit di Scopus Database"
+      "Proofreading Mendalam Native English Speaker",
+      "Bimbingan Jawaban & Revisi Respon Reviewer",
+      "Pengecekan Scope & Diskontinu Scopus Database",
+      "Garansi Indexing Terbit di Scopus.com"
+    ]
+  },
+  {
+    id: 2,
+    title: "Jurnal Internasional Copernicus",
+    subtitle: "Index Copernicus International (ICI)",
+    level: "Internasional Terindeks",
+    targetAudience: "Syarat Tesis S2 & Portofolio Global",
+    description: "Pilihan tepat dan efisien untuk luaran riset pascasarjana, diseminasi karya ilmiah, dan penguatan portofolio publikasi internasional.",
+    badgeTop: "COPERNICUS",
+    badgeBottom: "INDEXED",
+    badgeIcon: "copernicus",
+    isPopular: false,
+    tag: "Proses Cepat & Terarah",
+    features: [
+      "Terdaftar di Index Copernicus Master List (ICV)",
+      "Bimbingan Peer-Review & Layout Standar Internasional",
+      "Tracking Naskah Real-Time dari Submit hingga LoA",
+      "Sertifikat Publikasi & Link Online Jurnal"
+    ]
+  },
+  {
+    id: 3,
+    title: "Jurnal Internasional EBSCO",
+    subtitle: "EBSCO Host Database",
+    level: "Basis Data Global",
+    targetAudience: "Sitasi & Rekam Jejak Internasional",
+    description: "Tingkatkan sitasi dan visibilitas riset Anda di database akademik dunia EBSCO Host untuk eksposur karir akademik global.",
+    badgeTop: "EBSCO",
+    badgeBottom: "INDEXED",
+    badgeIcon: "ebsco",
+    isPopular: false,
+    tag: "Visibilitas Luas",
+    features: [
+      "Translasi Akademik & Proofreading Menyeluruh",
+      "Standarisasi Metodologi & Format Penulisan IMRAD",
+      "Sertifikat & Kelengkapan Administrasi Publikasi",
+      "Indexing di EBSCO Discovery Service"
     ]
   }
 ];
 
 export const Products = () => {
+  const [filter, setFilter] = useState<"all" | "nasional" | "internasional">("all");
+
+  const filteredProducts = products.filter(p => {
+    if (filter === "nasional") return p.badgeIcon === "sinta";
+    if (filter === "internasional") return p.badgeIcon !== "sinta";
+    return true;
+  });
+
   return (
-    <section id="produk" className="py-14 md:py-24 bg-amber-50/30 dark:bg-slate-950 transition-colors duration-300">
-      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+    <section id="produk" className="relative py-20 md:py-28 bg-slate-950 text-white overflow-hidden border-t border-slate-800/80">
+      
+      {/* Ambient background glows */}
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[450px] h-[450px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="container relative mx-auto px-4 md:px-6 max-w-7xl z-10">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 font-semibold text-xs sm:text-sm mb-3 border border-amber-500/20"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/15 text-amber-400 font-semibold text-xs sm:text-sm mb-4 border border-amber-500/30 shadow-inner"
           >
-            <span>Pilihan Indeksasi Riset</span>
+            <Award className="w-4 h-4 text-amber-400" />
+            <span>Pilihan Indeksasi Publikasi Riset</span>
           </motion.div>
+
           <motion.h2
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-jakarta text-slate-900 dark:text-white tracking-tight mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-jakarta text-white tracking-tight mb-4 leading-tight"
           >
-            Paket Publikasi Berdasarkan <span className="text-gradient">Target Indeksasi</span>
+            Paket Publikasi Berdasarkan <span className="text-amber-400">Target Indeksasi</span>
           </motion.h2>
+
           <motion.p
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15 }}
-            className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed"
           >
-            Sesuaikan manuskrip Anda dengan target luaran penelitian, syarat kelulusan magister/doktoral, maupun syarat khusus kenaikan jabatan fungsional dosen.
+            Sesuaikan manuskrip Anda dengan target luaran penelitian, syarat kelulusan magister/doktoral, maupun syarat khusus kenaikan jabatan fungsional dosen (Lektor Kepala & Guru Besar).
           </motion.p>
+
+          {/* Quick Filter Buttons */}
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mt-8">
+            {[
+              { id: "all", label: "Semua Target Indeksasi" },
+              { id: "nasional", label: "Jurnal Nasional (SINTA)" },
+              { id: "internasional", label: "Jurnal Internasional (Scopus/Copernicus/EBSCO)" }
+            ].map(tab => (
+              <button
+                key={tab.id}
+                onClick={() => setFilter(tab.id as any)}
+                className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all border ${
+                  filter === tab.id
+                    ? "bg-amber-500 text-slate-950 border-amber-400 shadow-lg shadow-amber-500/20"
+                    : "bg-slate-900/80 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Product Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product, index) => (
-            <motion.div
-              key={product.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-7 border border-amber-100/60 dark:border-slate-800 shadow-lg shadow-slate-100 dark:shadow-none hover:shadow-2xl hover:border-amber-500/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full group"
-            >
-              {/* SVG Badge */}
-              <div className="flex justify-center mb-6">
-                <GoldBadge 
-                  topText={product.badgeTop} 
-                  bottomText={product.badgeBottom} 
-                  iconType={product.badgeIcon} 
-                />
-              </div>
+        {/* NEW CARD MATRIX LAYOUT */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          {filteredProducts.map((product, index) => {
+            const isFeatured = product.isPopular;
 
-              {/* Title & Description */}
-              <div className="mb-4">
-                <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-jakarta leading-snug mb-2.5">
-                  {product.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-                  {product.description}
-                </p>
+            return (
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className={`relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 group ${
+                  isFeatured
+                    ? "bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 border-2 border-amber-500 shadow-2xl shadow-amber-500/15 ring-1 ring-amber-500/30 lg:-translate-y-2"
+                    : "bg-slate-900/70 backdrop-blur-md border border-slate-800 hover:border-amber-500/50 hover:bg-slate-900/90 shadow-xl hover:-translate-y-1"
+                }`}
+              >
+                {/* Featured Badge Ribbon */}
+                {isFeatured && (
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20">
+                    <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gradient-to-r from-amber-500 to-yellow-400 text-slate-950 font-black text-[11px] uppercase tracking-wider shadow-lg shadow-amber-500/40">
+                      <Zap className="w-3.5 h-3.5 fill-slate-950" />
+                      Paling Populer
+                    </span>
+                  </div>
+                )}
 
-                {/* Features Checklist */}
-                <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 space-y-2">
-                  {product.features.map((feat, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <span className="text-amber-500 text-xs font-black mt-0.5">✓</span>
-                      <span className="text-xs text-slate-600 dark:text-slate-400 font-medium leading-tight">{feat}</span>
+                <div>
+                  {/* Top Header: Badge & Category Tag */}
+                  <div className="flex items-start justify-between gap-3 mb-5">
+                    <div>
+                      <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-lg border border-amber-500/20 mb-2">
+                        {product.level}
+                      </span>
+                      <h3 className="text-lg sm:text-xl font-bold text-white font-jakarta leading-snug">
+                        {product.title}
+                      </h3>
+                      <p className="text-xs text-amber-300/90 font-medium mt-0.5">
+                        {product.subtitle}
+                      </p>
                     </div>
-                  ))}
-                </div>
-              </div>
 
-              {/* Action Button */}
-              <div className="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800">
-                <a
-                  href={`/produk#${product.badgeIcon}`}
-                  className="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-600 hover:text-slate-950 dark:text-amber-400 dark:hover:text-slate-950 text-xs sm:text-sm font-bold transition-all"
-                >
-                  <span>Lihat Detail Paket</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </motion.div>
-          ))}
+                    {/* Gold Medallion with subtle glow */}
+                    <div className="shrink-0 relative">
+                      <div className="absolute inset-0 bg-amber-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <GoldBadge 
+                        topText={product.badgeTop} 
+                        bottomText={product.badgeBottom} 
+                        iconType={product.badgeIcon} 
+                      />
+                    </div>
+                  </div>
+
+                  {/* Target Audience Pill */}
+                  <div className="mb-4 p-2.5 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-center gap-2">
+                    <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <span className="text-[11px] font-semibold text-slate-200 leading-tight">
+                      {product.targetAudience}
+                    </span>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-xs text-slate-300 leading-relaxed mb-6">
+                    {product.description}
+                  </p>
+
+                  {/* Deliverables Checklist */}
+                  <div className="pt-4 border-t border-slate-800 space-y-2.5 mb-6">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+                      Fasilitas Layanan:
+                    </span>
+                    {product.features.map((feat, i) => (
+                      <div key={i} className="flex items-start gap-2 text-xs text-slate-200">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
+                        <span className="leading-tight">{feat}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Bottom Action Area */}
+                <div className="pt-4 border-t border-slate-800/80 space-y-2.5">
+                  <a
+                    href={`/produk#${product.badgeIcon}`}
+                    className={`inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                      isFeatured
+                        ? "bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-lg shadow-amber-500/25"
+                        : "bg-slate-800/80 hover:bg-amber-500 hover:text-slate-950 text-slate-200 border border-slate-700/80"
+                    }`}
+                  >
+                    <span>Pelajari Paket Lengkap</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+
+                  <a
+                    href={`https://wa.me/6281528476713?text=Halo%20Admin%20Triaksara,%20saya%20tertarik%20dengan%20paket%20${encodeURIComponent(product.title)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-1.5 w-full py-2 text-xs font-semibold text-slate-400 hover:text-amber-400 transition-colors"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5" />
+                    <span>Konsultasi Cepat via WhatsApp</span>
+                  </a>
+                </div>
+
+              </motion.div>
+            );
+          })}
         </div>
+
+        {/* Bottom Guarantee Banner */}
+        <div className="mt-14 p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div className="flex items-center gap-4">
+            <div className="p-3 rounded-xl bg-amber-500/15 text-amber-400 border border-amber-500/20 shrink-0">
+              <ShieldCheck className="w-6 h-6" />
+            </div>
+            <div>
+              <h4 className="text-sm sm:text-base font-bold text-white">
+                Bingung Menentukan Indeksasi yang Cocok untuk Manuskrip Anda?
+              </h4>
+              <p className="text-xs text-slate-400 mt-0.5">
+                Kirimkan judul atau abstrak naskah Anda. Tim editor kami akan menganalisis scope dan memberikan rekomendasi indeksasi terbaik secara gratis.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="https://wa.me/6281528476713?text=Halo%20Admin,%20saya%20ingin%20analisis%20rekomendasi%20indeksasi%20jurnal%20gratis"
+            target="_blank"
+            rel="noreferrer"
+            className="shrink-0 px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm shadow-md transition-transform hover:scale-105"
+          >
+            Analisis Naskah Gratis
+          </a>
+        </div>
+
       </div>
     </section>
   );
