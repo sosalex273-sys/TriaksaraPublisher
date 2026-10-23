@@ -114,13 +114,9 @@ export const Legality = () => {
                       <span className="text-slate-400">Status Legalitas</span>
                       <span className="font-bold text-emerald-400">NIB & NPWP Aktif</span>
                     </div>
-                    <div className="flex justify-between py-1.5 border-b border-slate-700/50">
+                    <div className="flex justify-between py-1.5">
                       <span className="text-slate-400">Domisili Kantor</span>
                       <span className="font-bold text-white">Sleman, D.I. Yogyakarta</span>
-                    </div>
-                    <div className="flex justify-between py-1.5">
-                      <span className="text-slate-400">Jaminan Transaksi</span>
-                      <span className="font-bold text-amber-400">Rekening Resmi Perusahaan</span>
                     </div>
                   </div>
 

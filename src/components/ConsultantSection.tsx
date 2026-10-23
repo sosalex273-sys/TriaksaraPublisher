@@ -6,29 +6,32 @@ import { Award, CheckCircle2, MessageCircle, ShieldCheck, UserCheck, FileCheck, 
 
 export const ConsultantSection = () => {
   return (
-    <section id="konsultan" className="relative py-24 md:py-32 overflow-hidden border-y border-slate-800/80">
-      {/* Background Image: Gedung */}
+    <section id="konsultan" className="relative py-14 sm:py-20 md:py-32 overflow-hidden border-y border-slate-800/80">
+      {/* Background Image: Gedung Kantor Pusat (Disesuaikan khusus mobile agar logo & arsitektur gedung tetap presisi & megah) */}
       <div 
-        className="absolute inset-0 bg-cover bg-[center_35%] bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-no-repeat bg-[53%_14%] sm:bg-[53%_22%] md:bg-[center_35%] transition-all duration-500"
         style={{ backgroundImage: "url('/images/gedung.png')" }}
       />
-      {/* Subtle Overlay to Keep Building Clear & Crisp */}
-      <div className="absolute inset-0 bg-slate-950/30" />
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-transparent to-slate-950/85" />
+      {/* Responsive Overlays & Vignette for Maximum Clarity & Depth */}
+      <div className="absolute inset-0 bg-slate-950/60 sm:bg-slate-950/45 md:bg-slate-950/30 backdrop-blur-[0.5px] md:backdrop-blur-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/90 via-slate-950/50 to-slate-950 sm:via-slate-950/30 md:from-slate-950/75 md:via-transparent md:to-slate-950/85" />
+      
+      {/* Ambient Radial Glow to Highlight Center Architecture */}
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-amber-500/15 rounded-full blur-[90px] sm:blur-[120px] pointer-events-none" />
 
       <div className="container relative mx-auto px-4 md:px-6 lg:px-8 z-10 max-w-6xl">
         
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/15 text-amber-400 text-xs sm:text-sm font-semibold mb-4 border border-amber-500/30 shadow-inner"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 text-amber-400 text-xs sm:text-sm font-semibold mb-3 sm:mb-4 border border-amber-500/30 shadow-inner backdrop-blur-md"
           >
             <UserCheck className="w-4 h-4 text-amber-400" />
-            <span>Pendampingan 1-on-1 Terpercaya</span>
+            <span>Kantor Pusat & Pendampingan 1-on-1 Resmi</span>
           </motion.div>
 
           <motion.h2
@@ -36,7 +39,7 @@ export const ConsultantSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-jakarta text-white tracking-tight mb-5"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-jakarta text-white tracking-tight mb-3 sm:mb-5 leading-snug"
           >
             Didampingi Langsung oleh <span className="text-amber-400">Konsultan & Tim Ahli Resmi</span>
           </motion.h2>
@@ -46,14 +49,14 @@ export const ConsultantSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed"
+            className="text-xs sm:text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto"
           >
             Naskah Anda tidak dibiarkan begitu saja. Tim konsultan, editor, dan reviewer profesional kami siap membedah, menyelaraskan kaidah penulisan ilmiah, hingga mengawal artikel Anda sampai status <b className="text-white">Accepted & Published</b>.
           </motion.p>
         </div>
 
         {/* Content Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-10 sm:mb-12">
           
           {/* Card 1: Legalitas & Kredibilitas */}
           <motion.div
@@ -61,7 +64,7 @@ export const ConsultantSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="p-6 sm:p-8 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-slate-800 shadow-xl hover:border-amber-500/40 transition-all flex flex-col justify-between"
+            className="p-5 sm:p-8 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-slate-800 shadow-xl hover:border-amber-500/40 transition-all flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center gap-3.5 mb-5">
@@ -103,7 +106,7 @@ export const ConsultantSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="p-6 sm:p-8 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-slate-800 shadow-xl hover:border-amber-500/40 transition-all flex flex-col justify-between"
+            className="p-5 sm:p-8 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-slate-800 shadow-xl hover:border-amber-500/40 transition-all flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between mb-5">
